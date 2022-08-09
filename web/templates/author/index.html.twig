@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Author index{% endblock %}
+
+{% block body %}
+    <h1>Author index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Firstname</th>
+                <th>Surname</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for author in authors %}
+            <tr>
+                <td>{{ author.id }}</td>
+                <td>{{ author.firstname }}</td>
+                <td>{{ author.surname }}</td>
+                <td>
+                    <a href="{{ path('app_author_show', {'id': author.id}) }}">show</a>
+                    <a href="{{ path('app_author_edit', {'id': author.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_author_new') }}">Create new</a>
+{% endblock %}

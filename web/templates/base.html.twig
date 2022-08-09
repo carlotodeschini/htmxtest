@@ -14,6 +14,15 @@
         {% endblock %}
     </head>
     <body>
+        {% block menu %}
+            <br>
+            <ul>
+                <li><a href="{{ path('app_book_index') }}">Books</a></li>
+                <li><a href="{{ path('app_author_index') }}">Authors</a></li>
+                <li><a href="{{ path('app_genre_index') }}">Genres</a></li>
+            </ul>
+        {% endblock %}
+
         {% block body %}{% endblock %}
     </body>
 </html>
