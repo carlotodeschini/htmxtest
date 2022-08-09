@@ -1,2 +1,2 @@
 # turbotest
-Symfony CRUS test with Turbo UX
+Symfony CRUD test with Turbo UX
