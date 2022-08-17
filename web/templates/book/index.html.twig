@@ -3,8 +3,6 @@
 {% block title %}Book index{% endblock %}
 
 {% block body %}
-
-
     <h1>Book index</h1>
 
     <table class="table">
@@ -37,15 +35,5 @@
         </tbody>
     </table>
 
-<div {{ stimulus_controller('modal-form') }}>
-
-    <a href="{{ path('app_book_new') }} " data-bs-toggle="modal" data-bs-target="#exampleModal" data-action="modal-form#openModal">Create new</a>
-
-    {{ include('_modal.html.twig', {
-        modalTitle: 'Add a new Book',
-        modalSrc: path('app_book_new'),
-        id: 'book-info',
-    }) }}
-</div>
-
+    <a href="{{ path('app_book_new') }}">Create new</a>
 {% endblock %}

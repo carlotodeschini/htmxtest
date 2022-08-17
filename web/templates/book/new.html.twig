@@ -5,9 +5,7 @@
 {% block body %}
     <h1>Create new Book</h1>
 
-    <turbo-frame id="book-info" target="_top">
-        {{ include('book/_form.html.twig') }}
-    </turbo-frame>
+    {{ include('book/_form.html.twig') }}
 
     <a href="{{ path('app_book_index') }}">back to list</a>
 {% endblock %}
