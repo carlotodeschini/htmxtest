@@ -25,7 +25,9 @@ class BookController extends AbstractController
     public function new(Request $request, BookRepository $bookRepository): Response
     {
         $book = new Book();
-        $form = $this->createForm(BookType::class, $book);
+        $form = $this->createForm(BookType::class, $book, [
+            'action' => $this->generateUrl('app_book_new'),
+        ]);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -37,6 +39,7 @@ class BookController extends AbstractController
         return $this->renderForm('book/new.html.twig', [
             'book' => $book,
             'form' => $form,
+            'formTarget' => $request->headers->get('Turbo-Frame', '_top')
         ]);
     }
 
