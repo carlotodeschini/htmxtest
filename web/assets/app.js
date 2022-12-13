@@ -23,3 +23,8 @@ import './styles/app.scss';
 
 // start the Stimulus application
 import './bootstrap';
+
+// import HTMX library
+import 'htmx.org';
+window.htmx = require('htmx.org');
+import './htmx_functions.js';
