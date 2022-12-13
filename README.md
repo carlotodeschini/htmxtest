@@ -15,6 +15,8 @@ Make sure you have 'yarn' installed and PHP 8.1.
 ```
 $ cd web/
 $ composer install
+$ yarn install
+$ yarn dev
 ```
 
 Run migrations:
@@ -31,5 +33,5 @@ $ symfony server:start
 
 go to
 
-[http://localhost:8000/book/](http://localhost:8000/book/)
+[https://localhost:8000/book/](https://localhost:8000/book/)
 
