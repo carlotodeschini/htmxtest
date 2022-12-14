@@ -1,0 +1,47 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title">{{ modalTitle }}</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  </div>
+  <div class="modal-body">
+  
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ book.id }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ book.title }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ book.description }}</td>
+            </tr>
+            <tr>
+                <th>Year</th>
+                <td>{{ book.year }}</td>
+            </tr>
+            <tr>
+                <th>Author</th>
+                <td>{{ book.author }}</td>
+            </tr>
+            <tr>
+                <th>Genre</th>
+                <td>
+                {% for genre in book.genre %}
+                  <span class="badge bg-primary">{{ genre }}</span>
+                {% endfor %}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+        Cancel
+    </button>
+  </div>
+</div>

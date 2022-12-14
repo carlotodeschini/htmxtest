@@ -35,3 +35,7 @@ go to
 
 [https://localhost:8000/book/](https://localhost:8000/book/)
 
+## References
+
+[Blog Post "Modal forms with Django+HTMX" from Benoit Blanchon](https://blog.benoitblanchon.fr/django-htmx-modal-form/)
+[Video tutorial](https://www.youtube.com/watch?v=3dyQigrEj8A&ab_channel=BenoitBlanchon)

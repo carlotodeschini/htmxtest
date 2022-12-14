@@ -1,0 +1,61 @@
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Year</th>
+            <th>Author</th>
+            <th>Genre</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for book in books %}
+        <tr>
+            <td>{{ book.id }}</td>
+            <td>{{ book.title }}</td>
+            <td>{{ book.description }}</td>
+            <td>{{ book.year }}</td>
+            <td>{{ book.author }}</td>
+            <td>
+            {% for genre in book.genre %}
+                <span class="badge bg-primary">{{ genre }}</span>
+            {% endfor %}
+            </td>
+            <td>
+                <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Action
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                    <a class="dropdown-item" hx-get="{{ path('_app_book_show', {'id': book.id}) }}" hx-target="#dialog">
+                        Show
+                    </a>
+                    </li>
+                    <li>
+                    <a class="dropdown-item" hx-get="{{ path('_app_book_edit', {'id': book.id}) }}" hx-target="#dialog">
+                        Edit
+                    </a>
+                    </li>
+                    <li>
+                    <div hx-post="{{ path('_app_book_delete', {'id': book.id}) }}" hx-target="#dialog" hx-include="[name='_token']" hx-confirm="Are you sure to delete this item?">
+                        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ book.id) }}">
+                        <a class="dropdown-item text-danger">
+                        Delete
+                        </a>
+                    </div>
+                    </li>
+                </ul>
+                </div>
+            </td>
+        </tr>
+    {% else %}
+        <tr>
+            <td colspan="7">no records found</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
