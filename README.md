@@ -1,6 +1,14 @@
-# turbotest
-Symfony CRUD test with Turbo UX
+# htmxtest
 
+Symfony CRUD test with HTMX library.
+
+This is a simple web site with 3 entities: book, genre of the book and author of the book.
+
+I generated the 3 crud web interfaces with Symfony make bundle (make:crud) and then I modified the book controller to use HTMX library to have a SPA behaviour: new, show and edit book in a bootstrap modal, delete book confirmation also with bootstrap modal.
+
+The goal is to compare standard Symfony CRUD form with HTMX CRUD form.
+
+The author and genre CRUD is with the standard HTML template, the book templates are using bootstrap.
 
 ## Setup
 
@@ -8,13 +16,14 @@ Symfony CRUD test with Turbo UX
 $ git clone ...
 ```
 
-and then copy .env to .env.local and set your database.
+and then copy .env to .env.local and set your database; by default .env use sqlite.
 
-Make sure you have 'yarn' installed and PHP 8.1.
+Make sure you have PHP 8.1, 'composer', 'yarn' and 'symfony' command installed.
+
 
 ```
 $ cd web/
-$ composer install
+$ composer install/update
 $ yarn install
 $ yarn dev
 ```
@@ -37,5 +46,6 @@ go to
 
 ## References
 
-[Blog Post "Modal forms with Django+HTMX" from Benoit Blanchon](https://blog.benoitblanchon.fr/django-htmx-modal-form/)
-[Video tutorial](https://www.youtube.com/watch?v=3dyQigrEj8A&ab_channel=BenoitBlanchon)
+- [HTMX - high power tools for HTML](https://htmx.org/)
+- [Blog Post "Modal forms with Django+HTMX" from Benoit Blanchon](https://blog.benoitblanchon.fr/django-htmx-modal-form/)
+- [Video tutorial](https://www.youtube.com/watch?v=3dyQigrEj8A&ab_channel=BenoitBlanchon)
