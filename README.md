@@ -52,5 +52,4 @@ go to
 
 - [Symfony PHP framework](https://symfony.com/)
 - [HTMX - high power tools for HTML](https://htmx.org/)
-- [Blog Post "Modal forms with Django+HTMX"](https://blog.benoitblanchon.fr/django-htmx-modal-form/) from Benoit Blanchon inspiring article 
-- [Video tutorial](https://www.youtube.com/watch?v=3dyQigrEj8A&ab_channel=BenoitBlanchon)
+- Blog Post ["Modal forms with Django+HTMX"](https://blog.benoitblanchon.fr/django-htmx-modal-form/) from Benoit Blanchon inspiring article and [Video tutorial](https://www.youtube.com/watch?v=3dyQigrEj8A&ab_channel=BenoitBlanchon)
