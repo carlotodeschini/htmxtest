@@ -44,6 +44,13 @@ go to
 
 [https://localhost:8000/book/](https://localhost:8000/book/)
 
+## To simply test EasyAdmin
+
+go to
+
+[https://localhost:8000/admin/](https://localhost:8000/admin/)
+
+
 ## References
 
 - [HTMX - high power tools for HTML](https://htmx.org/)
