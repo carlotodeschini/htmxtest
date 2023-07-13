@@ -2,13 +2,17 @@
 
 Symfony CRUD test with HTMX library.
 
-This is a simple web site with 3 entities: book, genre of the book and author of the book.
+This is a simple web site with 3 entities: book, genre of the book, author of the book.
 
-I generated the 3 crud web interfaces with Symfony make bundle (make:crud) and then I modified the book controller to use HTMX library to have a SPA behaviour: new, show and edit book in a bootstrap modal, delete book confirmation also with bootstrap modal.
+I generated the 3 crud web interfaces with Symfony make bundle ('make:entity' and then 'make:crud') and then I modified the book controller and templates to use HTMX library to have a SPA behaviour: new, show and edit book in a bootstrap modal, delete book confirmation also with bootstrap modal.
 
-The goal is to compare standard Symfony CRUD form with HTMX CRUD form.
+The goal is to compare standard Symfony CRUD form with HTMX CRUD form. So:
 
-The author and genre CRUD is with the standard HTML template, the book templates are using bootstrap.
+* author CRUD is the symfony standard CRUD with generated plain HTML template
+* genre CRUD is the symfony standard CRUD with generated plain HTML template
+* book is a modified CRUD using HTMX, bootstrap library ad a very little of javascript
+
+My goal is to show how simply is to use HTMX with Symfony standard backend ;-)
 
 ## Setup
 
@@ -53,6 +57,6 @@ go to
 
 ## References
 
+- [Symfony PHP framework](https://symfony.com/)
 - [HTMX - high power tools for HTML](https://htmx.org/)
-- [Blog Post "Modal forms with Django+HTMX" from Benoit Blanchon](https://blog.benoitblanchon.fr/django-htmx-modal-form/)
-- [Video tutorial](https://www.youtube.com/watch?v=3dyQigrEj8A&ab_channel=BenoitBlanchon)
+- Blog Post ["Modal forms with Django+HTMX"](https://blog.benoitblanchon.fr/django-htmx-modal-form/) from Benoit Blanchon inspiring article and [Video tutorial](https://www.youtube.com/watch?v=3dyQigrEj8A&ab_channel=BenoitBlanchon)
